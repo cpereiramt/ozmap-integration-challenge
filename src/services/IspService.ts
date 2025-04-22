@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_BASE_URL = process.env.ISP_API_URL || 'http://localhost:4000';
+const API_BASE_URL = process.env.ISP_API_URL || "http://localhost:4000";
 
 export class IspService {
   static async getCables() {
@@ -18,7 +18,7 @@ export class IspService {
     return response.data;
   }
 
-  static async getCustomers() {
+  static async getClients() {
     const response = await axios.get(`${API_BASE_URL}/customers`);
     return response.data;
   }

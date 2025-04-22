@@ -18,16 +18,7 @@ export class TransformerService {
     };
   }
 
-  static transformDropCable(drop: any) {
-    return {
-      external_id: `drop-${drop.id}`,
-      name: drop.name,
-      box_external_id: `box-${drop.box_id}`,
-      customer_external_id: `customer-${drop.customer_id}`,
-    };
-  }
-
-  static transformCustomer(customer: any) {
+  static transformClient(customer: any) {
     return {
       external_id: `customer-${customer.id}`,
       name: customer.name,

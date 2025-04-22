@@ -13,7 +13,7 @@ async function main() {
   const drops = await IspService.getDropCables();
   console.log("Drops:", drops);
 
-  const customers = await IspService.getCustomers();
+  const customers = await IspService.getClients();
   console.log("Clientes:", customers);
 }
 
