@@ -22,11 +22,14 @@ Por se tratar de um ambiente de teste, a integração foi **estruturada e mockad
 src/
 ├── index.ts                  # Testes iniciais
 ├── sync.ts                   # Orquestrador principal (mock completo)
+├── utils/                    # Funções utilitárias
+├──  models/                  # Modelos de dados
 ├── services/
 │   ├── IspService.ts         # Consome dados mockados do ISP
 │   ├── TransformerService.ts # Transforma dados para o modelo da OZmap
 │   └── OzmapService.ts       # Envia dados para a OZmap (simulado)
-db.json                       # Mock da API ISP via json-server
+db.json                      # Mock da API ISP via json-server
+env.example                  # Exemplo de variáveis de ambiente
 ```
 
 ---
