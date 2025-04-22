@@ -23,13 +23,14 @@ src/
 ├── index.ts                  # Testes iniciais
 ├── sync.ts                   # Orquestrador principal (mock completo)
 ├── utils/                    # Funções utilitárias
-├──  models/                  # Modelos de dados
+├── models/                   # Modelos de dados
+├── config/                   # Configurações do projeto
 ├── services/
 │   ├── IspService.ts         # Consome dados mockados do ISP
 │   ├── TransformerService.ts # Transforma dados para o modelo da OZmap
 │   └── OzmapService.ts       # Envia dados para a OZmap (simulado)
-db.json                      # Mock da API ISP via json-server
-env.example                  # Exemplo de variáveis de ambiente
+db.json                       # Mock da API ISP via json-server
+env.example                   # Exemplo de variáveis de ambiente
 ```
 
 ---
@@ -80,9 +81,11 @@ Este projeto **foi implementado com base no SDK oficial** da OZmap, mas:
 
 1. Solicite acesso ao módulo API via suporte: [https://ozmap.com/en/test-now](https://ozmap.com/en/test-now)
 2. Crie um usuário com permissão de API
-3. Atualize o `.env`:
+3. Atualize o `.env` baseado no .env.example:
 
-```env
+```bash
+
+ISP_API_URL=http://localhost:4000
 OZMAP_LOGIN=seu-email@ozmap.com
 OZMAP_PASSWORD=sua-senha
 ```
@@ -99,7 +102,7 @@ Este projeto demonstra:
 - Adaptação a ambientes simulados
 - Manipulação de dados via SDK externo
 - Prontidão para produção real
-- Boas práticas com `.env`, `services`, `utils/` e automação via `package.json`
+- Boas práticas com `.env`, `services`, `utils`, `models`, `config` e automação via `package.json`
 
 ---
 
