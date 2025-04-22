@@ -20,7 +20,7 @@ export class TransformerService {
 
   static transformClient(customer: any) {
     return {
-      external_id: `customer-${customer.id}`,
+      external_id: `client-${customer.id}`,
       name: customer.name,
       address: customer.address,
       box_external_id: `box-${customer.box_id}`,
